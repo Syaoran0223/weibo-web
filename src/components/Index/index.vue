@@ -1,6 +1,6 @@
 <template>
-  <div id="index">
-	  <div class="login">
+	<div id="index">
+	  	<div class="login">
 	  	<div class="login-part">
 	  		<div class="title">
 	  			帐号
@@ -17,37 +17,44 @@
 				<input type="text" name="" value="" v-model='loginParams.password'>
 			</div>
 		</div>
-	  </div>
-	  <div class="">
-	  	<button type="button" name="button" @click="login()">登录</button>
-	  </div>
-  </div>
+	  	</div>
+	  	<div class="">
+	  		<button type="button" name="button" @click="login()">登录</button>
+	  	</div>
+	</div>
 </template>
 
 <script>
-  import { login } from '@/components/API/user'
+import { login } from '@/components/API/user'
 export default {
-  data () {
-    return {
-      loginParams: {
-        username: '',
-        password: '',
-      },
-    }
-  },
-  methods: {
-    login() {
-      let data = this.loginParams
-      login(data).then((res) => {
-        console.log('login res', res)
-      })
-    }
-  },
+	data () {
+	return {
+			loginParams: {
+				username: '',
+				password: '',
+			},
+		}
+	},
+	created() {
+
+	},
+	methods: {
+		login() {
+		  	let data = this.loginParams
+		  	login(data).then((res) => {
+		    	console.log('login res', res)
+		  	})
+		}
+	},
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+	#index {
+		
+
+	}
 h1, h2 {
   font-weight: normal;
 }
