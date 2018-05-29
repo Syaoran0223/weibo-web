@@ -2,6 +2,9 @@
 	<div id="index">
 		<banner></banner>
 		<!-- 文章列表 -->
+		<h1>
+			<router-link :to="{ path: '/test', params: {} }">测试路由</router-link>
+		</h1>
 		<articleList></articleList>
 	</div>
 </template>
@@ -21,7 +24,14 @@ export default {
 	components: {
 		banner,
 		articleList,
-	}
+	},
+	watch: {
+       '$route' (to, from) {
+		   console.log('监听路由')
+         // 对路由变化作出响应...
+       }
+     }
+
 }
 </script>
 

@@ -4,6 +4,7 @@
       <el-col
         :span="6"
         :xs="24"
+
         v-for="(l, index) in list"
         :key="index"
       >
@@ -84,13 +85,14 @@ export default {
     .articleList {
         margin-top: 20px;
         width: 100%;
-        display: flex;
-        justify-content: flex-start;
+        // display: flex;
+        // justify-content: flex-start;
         margin-bottom: 10px;
     }
     .el-card {
         padding: 0px;
         height: 400px;
+		width: 100%;
         margin-bottom: 30px;
         img {
             width: 100%;
