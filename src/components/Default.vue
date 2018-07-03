@@ -11,7 +11,7 @@
 import vheader from '@/components/public/Header.vue'
 import vfooter from '@/components/public/Footer.vue'
 
-import { isLogin } from '@/components/API/user'
+import { isLogin } from '@/components/common/user'
 export default {
   name: 'App',
   data() {

@@ -34,17 +34,17 @@
 </template>
 
 <script>
-import { login } from '@/components/API/user'
+import { login } from '@/components/common/user'
 export default {
     data() {
         return {
             loginParams: {
-				username: '',
-				password: '',
-			},
-            dialogVisible: false,
-            errorFlag: false,
-            loginError: '登录失败',
+              username: '',
+              password: '',
+            },
+          dialogVisible: false,
+          errorFlag: false,
+          loginError: '登录失败',
         }
     },
     methods: {
@@ -63,7 +63,7 @@ export default {
                 }
             }
             login(data).then((res) => {
-                this.log('login res', res)
+                this.log('login resss', res)
                 if (res.code != 0) {
                     this.loginError = res.msg
                     this.errorFlag = true

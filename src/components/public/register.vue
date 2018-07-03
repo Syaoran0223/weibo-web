@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { register } from '@/components/API/user'
+import { register } from '@/components/common/user'
 export default {
     data() {
         return {

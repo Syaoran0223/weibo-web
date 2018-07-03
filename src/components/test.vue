@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { isLogin } from '@/components/API/user'
+import { isLogin } from '@/components/common/user'
 export default {
     data() {
         return {
