@@ -22,8 +22,12 @@ export default {
                 this.log('test res', res)
             })
         },
-
     },
+	watch: {
+		$route() {
+			this.log('watch route')
+		}
+	},
 }
 </script>
 
